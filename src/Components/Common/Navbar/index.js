@@ -20,7 +20,7 @@ function index() {
               <p>Home</p>
             </NavLink>
             <NavLink
-              to="about-us"
+              to="about"
               id="navbarLink"
               className="mx-6 font-semibold text-base"
             >
