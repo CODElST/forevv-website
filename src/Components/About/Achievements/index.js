@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "./styles.css";
 import { ReactComponent as Meity } from "../../../assets/common/MEITY_Startup hub_logo.svg";
 import { ReactComponent as BackArrow } from "../../../assets/common/Group 183.svg";
+import { ReactComponent as Left } from "../../../assets/common/left.svg";
 
 function index() {
   return (
@@ -24,11 +25,18 @@ function index() {
           slidesToShow={1}
           slidesToScroll={1}
           autoplay={false}
-          prevArrow={<BackArrow />}
-          nextArrow={<BackArrow />}
+          prevArrow={<Left />}
+          nextArrow={<Left />}
         >
-          <div>
-            <div className="grid grid-cols-6 items-center p-5 lg:p-14 bg-white text-center lg:text-left">
+          <div className="p-2">
+            <div
+              className="grid grid-cols-6 items-center p-5 lg:p-14 bg-white text-center lg:text-left"
+              style={{
+                width: "98%",
+                height: "calc(100% - 100px)",
+                boxShadow: "4px 8px 10px #6D8DAD33",
+              }}
+            >
               <Meity className="col-span-6 lg:col-span-2 w-full relative" />
               <div className="hidden lg:block lg:col-span-1" />
               <p className="col-span-6  lg:col-span-3">
@@ -38,12 +46,22 @@ function index() {
               </p>
             </div>
           </div>
-          <div style={{ boxShadow: "4px 8px 20px #6D8DAD33" }}>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco.
-            </p>
+          <div className="p-2">
+            <div
+              className="grid grid-cols-6 items-center p-5 lg:p-14 bg-white text-center lg:text-left"
+              style={{
+                width: "98%",
+                height: "calc(100% - 100px)",
+                boxShadow: "4px 8px 20px #6D8DAD33",
+              }}
+            >
+              <Meity className="col-span-6 lg:col-span-2 w-full relative" />
+              <div className="hidden lg:block lg:col-span-1" />
+              <p className="col-span-6  lg:col-span-3">
+                Finalist in GSEA, AP Chapter. EO GSEA supports student
+                entrepreneurs in taking their business to the next level.
+              </p>
+            </div>
           </div>
         </Slider>
       </div>

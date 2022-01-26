@@ -30,12 +30,22 @@ function index() {
               <p className=" font-semibold text-base ">Elevator Pitch</p>
               <ExternalLinkIcon className="h-4 w-4 ml-3" />
             </div>
-            <NavLink
-              to="early-access"
-              className="mx-6 font-semibold text-base text-forevv-blue"
+            <a
+              className="mx-6 cursor-pointer font-semibold text-base text-forevv-blue"
+              onClick={() => {
+                var element = document.getElementById("early-access-div");
+                var headerOffset = 45;
+                var elementPosition = element.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.pageYOffset - 100;
+
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: "smooth",
+                });
+              }}
             >
               <p>Get Early Access</p>
-            </NavLink>
+            </a>
           </div>
         </div>
         <div className="flex lg:hidden h-full w-full content-center">

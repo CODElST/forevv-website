@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as Nasscom } from "../../../assets/common/Logo/Nasscom.svg";
-import { ReactComponent as Caarya } from "../../../assets/common/Logo/Caarya.svg";
+import Caarya from "../../../assets/common/Logo/Caarya.svg";
 import { ReactComponent as IEDLogo } from "../../../assets/common/Logo/IED.svg";
 import { ReactComponent as Xartup } from "../../../assets/common/Logo/Xartup.svg";
 
@@ -18,7 +18,7 @@ function index() {
       <div className="col-span-1" />
       <div className="col-span-10 lg:col-span-5 flex flex-row justify-around">
         <Nasscom className="max-h-40 md:max-h-fit " />
-        <Caarya className="max-h-40 md:max-h-fit " />
+        <img src={Caarya} alt="" className="max-h-40 md:max-h-fit " />
       </div>
       <div className="col-span-1 lg:hidden" />
 

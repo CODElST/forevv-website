@@ -10,7 +10,7 @@ function index() {
       </div>
       <div className="col-span-1 block lg:hidden" />
       <div className="col-span-1" />
-      <div className="col-span-10 lg:col-span-6 lg:text-left lg:h-screen">
+      <div className="col-span-10 lg:col-span-5 lg:text-left lg:h-screen">
         <p className="text-base lg:text-2xl font-normal relative lg:top-1/2 lg:-translate-y-1/2 whitespace-pre-line">
           Memories are at the core of our lives - they make us what we are.
           {"\n"}
@@ -34,8 +34,8 @@ function index() {
           Renowned Author
         </p>
       </div>
-      <div className="col-span-4 hidden lg:flex items-center">
-        <Blob className="w-full" />
+      <div className="col-span-5 justify-center hidden lg:flex items-center">
+        <Blob />
       </div>
       <div className="col-span-1" />
     </div>

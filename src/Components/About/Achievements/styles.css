@@ -5,7 +5,7 @@
 }
 
 .slick-arrow.slick-next {
-  transform-origin: center;
+  transform: translateY(-50%) rotate(180deg);
   height: 56px;
   width: 56px;
   right: -60px;

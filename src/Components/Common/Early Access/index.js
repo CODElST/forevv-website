@@ -1,9 +1,12 @@
 import React from "react";
-import { ReactComponent as SvgEarlyAccess } from "../../../assets/common/Group 245.svg";
+import { ReactComponent as SvgEarlyAccess } from "../../../assets/common/Group 245 (2).svg";
 
 function index() {
   return (
-    <div className="grid grid-cols-12 gap-2 relative mt-12 lg:mt-52 items-center">
+    <div
+      id="early-access-div"
+      className="grid grid-cols-12 gap-2 relative mt-12 lg:mt-52"
+    >
       <div className="col-span-1 lg:col-span-7" />
       <div className="col-span-10 lg:col-span-4 text-center justify-center">
         <p className="text-base font-semibold lg:text-4xl">Get Early Access</p>
@@ -15,7 +18,7 @@ function index() {
       </div>
       <div className="col-span-1 lg:hidden" />
       <div className="col-span-1" />
-      <div className="col-span-10 lg:col-span-3 text-center justify-center items-center lg:text-left">
+      <div className="col-span-10 lg:col-span-3 text-center justify-center items-center lg:mt-16 lg:text-left">
         <p className="text-base font-semibold lg:text-xl">
           Your chance to win:
         </p>
@@ -35,12 +38,18 @@ function index() {
       <div className="col-span-1 lg:col-span-3">
         <SvgEarlyAccess
           className="hidden lg:block w-full "
-          style={{ height: "150%" }}
+          style={{
+            height: 440,
+            transform: "translateY(-50%)",
+            top: "40%",
+            left: "-10%",
+            position: "relative",
+          }}
         />
       </div>
       <div className="col-span-1 lg:hidden" />
-      <div className="col-span-10 lg:col-span-4 text-left justify-center">
-        <div className="grid grid-cols-2 gap-7 lg:mt-14">
+      <div className="col-span-10 lg:col-span-4  lg:mt-16 text-left justify-center">
+        <div className="grid grid-cols-2 gap-7 lg:mt-0 ">
           <input
             type="text"
             placeholder="Your name"
