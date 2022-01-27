@@ -4,6 +4,7 @@ import { ReactComponent as BrandLogoMobile } from "../../../assets/mobileSpecifi
 import { ReactComponent as MenuIconMobile } from "../../../assets/mobileSpecific/Group 184 (1).svg";
 import { ExternalLinkIcon } from "@heroicons/react/outline";
 import { NavLink } from "react-router-dom";
+import { MobileMenu } from "../MobileMenu";
 
 function index() {
   return (
@@ -49,8 +50,8 @@ function index() {
           </div>
         </div>
         <div className="flex lg:hidden h-full w-full content-center">
-          <BrandLogoMobile className="relative top-1/2 -translate-y-1/2" />
-          <MenuIconMobile className="relative top-1/2 -translate-y-1/2 ml-auto mr-0" />
+          <MobileMenu className="relative top-1/2 -translate-y-1/2 right-0" />
+          <BrandLogoMobile className="relative top-1/2 -translate-y-1/2 shadow-md rounded-full" />
         </div>
       </header>
     </div>

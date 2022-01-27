@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       colors: {
         "forevv-blue": "#4896EF",
+        "footer-black": "#303030",
       },
       // screens: {
       //   lg: "950px",
