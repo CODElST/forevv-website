@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "./styles.css";
 import { ReactComponent as Meity } from "../../../assets/common/MEITY_Startup hub_logo.svg";
+import { ReactComponent as EO } from "../../../assets/common/Image 5.svg";
 import { ReactComponent as BackArrow } from "../../../assets/common/Group 183.svg";
 import { ReactComponent as Left } from "../../../assets/common/left.svg";
 
@@ -55,7 +56,7 @@ function index() {
                 boxShadow: "4px 8px 20px #6D8DAD33",
               }}
             >
-              <Meity className="col-span-6 lg:col-span-2 w-full relative" />
+              <EO className="col-span-6 lg:col-span-2 w-full relative" />
               <div className="hidden lg:block lg:col-span-1" />
               <p className="col-span-6  lg:col-span-3">
                 Finalist in GSEA, AP Chapter. EO GSEA supports student

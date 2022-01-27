@@ -58,7 +58,7 @@ export const MobileMenu = () => {
               <NavLink
                 to="/"
                 id="navbarLink"
-                className="mx-6 font-semibold text-2xl"
+                className="mx-6 font-semibold text-2xl max-w-min ml-auto mr-auto"
                 onClick={() => toggleOpen()}
               >
                 <p>Home</p>
@@ -66,7 +66,7 @@ export const MobileMenu = () => {
               <NavLink
                 to="about"
                 id="navbarLink"
-                className="mx-6 font-semibold text-2xl"
+                className="mx-6 font-semibold text-2xl max-w-max ml-auto mr-auto"
                 onClick={() => toggleOpen()}
               >
                 <p>About Us</p>

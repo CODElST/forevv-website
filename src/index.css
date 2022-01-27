@@ -11,7 +11,12 @@
 
 #navbarLink.active {
   font-weight: bold;
-  text-decoration: underline;
+  color: #4896ef;
+  border-bottom: 2px solid #4896ef;
+}
+
+#navbarLink:hover {
+  font-weight: bold;
 }
 
 .parentDiv {
@@ -23,6 +28,16 @@
     url("./assets/common/bkg.jpg");
   background-size: cover;
   background-attachment: fixed;
+}
+
+@media only screen and (max-width: 976px) {
+  .parentDiv {
+    background-image: none;
+  }
+}
+
+img#teamMemberDp:hover {
+  border-color: #4896ef;
 }
 
 code {

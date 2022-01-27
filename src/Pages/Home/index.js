@@ -7,6 +7,7 @@ function Homepage() {
   return (
     <div className="parentDiv">
       <Hero />
+
       <EarlyAccess />
       <Features />
     </div>

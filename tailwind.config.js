@@ -6,6 +6,9 @@ module.exports = {
         "forevv-blue": "#4896EF",
         "footer-black": "#303030",
       },
+      spacing: {
+        135: "68.5rem",
+      },
       // screens: {
       //   lg: "950px",
       //   // => @media (min-width: 992px) { ... }

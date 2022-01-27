@@ -5,6 +5,9 @@ import { ExternalLinkIcon } from "@heroicons/react/outline";
 import { MailIcon } from "@heroicons/react/solid";
 import Linkedin from "../../../assets/common/Linkedin.svg";
 import Instagram from "../../../assets/common/Insta.svg";
+import { NavLink } from "react-router-dom";
+import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
+import { IoIosMail } from "react-icons/io";
 
 function index() {
   return (
@@ -16,14 +19,19 @@ function index() {
             <p className="text-sm font-semibold  lg:text-2xl lg:whitespace-pre-line">
               QUICK LINKS
             </p>
-            <p className="text-xs font-semibold lg:text-2xl lg:whitespace-pre-line">
-              Home
-            </p>
-            <p className="text-xs font-semibold lg:text-2xl lg:whitespace-pre-line">
-              About
-            </p>
+            <NavLink to="/">
+              <p className="text-xs font-normal lg:text-xl lg:whitespace-pre-line">
+                Home
+              </p>
+            </NavLink>
+            <NavLink to="about">
+              <p className="text-xs font-normal lg:text-xl lg:whitespace-pre-line">
+                About
+              </p>
+            </NavLink>
+
             <div className="flex flex-row items-center">
-              <p className="text-xs font-semibold lg:text-2xl lg:whitespace-pre-line">
+              <p className="text-xs font-normal lg:text-xl lg:whitespace-pre-line">
                 Elevator Pitch
               </p>
               <ExternalLinkIcon className="h-5 w-5 ml-3" />
@@ -40,24 +48,38 @@ function index() {
             <p className="text-sm font-semibold lg:text-2xl lg:whitespace-pre-line">
               CONTACT US
             </p>
-            <div className="flex flex-row items-center">
-              <MailIcon className="h-6 mr-3" />
+
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@forevv.in"
+              target={"_blank"}
+              className="flex flex-row items-center"
+            >
+              <IoIosMail size={"1.875em"} className="mr-2" />
               <p className="text-xs font-normal lg:text-xl lg:whitespace-pre-line">
                 hello@forevv.in
               </p>
-            </div>
-            <div className="flex flex-row items-center">
-              <MailIcon className="h-6 mr-3" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/forevv/"
+              target={"_blank"}
+              className="flex flex-row items-center"
+            >
+              <AiFillLinkedin size={"1.875em"} className="mr-2" />
               <p className="text-xs font-normal lg:text-xl lg:whitespace-pre-line">
                 Forevv
               </p>
-            </div>
-            <div className="flex flex-row items-center">
-              <MailIcon className="h-6 mr-3" />
+            </a>
+            <a
+              href="https://www.instagram.com/forevv_india/"
+              target={"_blank"}
+              className="flex flex-row items-center"
+            >
+              <AiOutlineInstagram size={"1.875em"} className="mr-2" />
               <p className="text-xs font-normal lg:text-xl lg:whitespace-pre-line">
                 @forevv_india
               </p>
-            </div>
+            </a>
           </div>
         </div>
         <div className="col-span-1 lg:col-span-2" />

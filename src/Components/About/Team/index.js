@@ -17,6 +17,7 @@ import Linkedin from "../../../assets/common/Linkedin.svg";
 import Insta from "../../../assets/common/Insta.svg";
 import { ReactComponent as BackArrow } from "../../../assets/common/Group 183.svg";
 import { ReactComponent as ForwardArrow } from "../../../assets/common/left.svg";
+import { motion } from "framer-motion";
 
 const TeamData = [
   {
@@ -96,20 +97,20 @@ const TeamData = [
 function TeamComponent() {
   const [data, setData] = React.useState(TeamData[0]);
   return (
-    <div className="grid grid-cols-12 gap-2 relative mt-10 lg:mt-32 items-center">
+    <div className="grid grid-cols-12 gap-2 relative mt-10 lg:mt-32 items-center lg:mb-36">
       <div className="col-span-1" />
-      <div className="col-span-10 lg:col-span-4">
-        <p className="text-base lg:text-4xl font-bold lg:font-semibold text-center lg:whitespace-pre-line">
+      <div className="col-span-10 xl:col-span-4">
+        <p className="text-base lg:text-3xl font-bold lg:font-semibold text-center lg:whitespace-pre-line">
           Our Team
         </p>
       </div>
 
-      <div className="col-span-1 lg:col-span-7" />
+      <div className="col-span-1 xl:col-span-7" />
 
-      <div className="col-span-2 lg:col-span-1" />
-      <div className="col-span-8 lg:hidden ">
+      <div className="col-span-2 xl:col-span-1" />
+      <div className="col-span-8 xl:hidden ">
         <Slider
-          dots={true}
+          dots={false}
           infinite={false}
           speed={500}
           slidesToShow={1}
@@ -122,7 +123,11 @@ function TeamComponent() {
             <div key={id}>
               <div className=" border-2 rounded-2xl border-forevv-blue mx-1 mb-6 justify-center p-2 lg:p-14 bg-white text-center">
                 <div className="w-fit ml-auto mr-auto">
-                  <img src={item.pic} alt="" />
+                  <img
+                    src={item.pic}
+                    alt=""
+                    style={{ maxWidth: 125, maxHeight: 125, marginTop: 28 }}
+                  />
                 </div>
                 <p className="font-semibold text-lg mt-5 mb-2">{item.name}</p>
                 <p className="font-semibold text-xs text-forevv-blue mb-2">
@@ -130,15 +135,23 @@ function TeamComponent() {
                 </p>
                 <p className="italic text-base mb-2">{item.desc}</p>
                 <div className="flex flex-row justify-center">
-                  <img src={Linkedin} alt="" />
-                  <img src={Insta} alt="" />
+                  {item.linkedin !== "" ? (
+                    <img
+                      src={Linkedin}
+                      alt=""
+                      style={{ height: 60, width: 60 }}
+                    />
+                  ) : null}
+                  {item.instagram !== "" ? (
+                    <img src={Insta} alt="" style={{ height: 60, width: 60 }} />
+                  ) : null}
                 </div>
               </div>
             </div>
           ))}
         </Slider>
       </div>
-      <div className="hidden lg:block lg:col-span-4">
+      <div className="hidden xl:block xl:col-span-4 ">
         <div className="w-min ml-auto mr-auto mt-16">
           <Rectangle1 />
           <div
@@ -146,6 +159,7 @@ function TeamComponent() {
             style={{ width: "414px", height: "536px" }}
           >
             <img
+              id="teamMemberDp"
               src={SaiCharan}
               alt=""
               className="border-4 rounded-full"
@@ -158,6 +172,7 @@ function TeamComponent() {
               onClick={() => setData(TeamData[0])}
             />
             <img
+              id="teamMemberDp"
               src={ShivanshShukla}
               alt=""
               className="border-4 rounded-full"
@@ -170,6 +185,7 @@ function TeamComponent() {
               onClick={() => setData(TeamData[1])}
             />
             <img
+              id="teamMemberDp"
               src={AarushSinha}
               alt=""
               className="border-4 rounded-full"
@@ -183,6 +199,7 @@ function TeamComponent() {
               onClick={() => setData(TeamData[2])}
             />
             <img
+              id="teamMemberDp"
               src={VanshikaThakur}
               alt=""
               className="border-4 rounded-full"
@@ -196,6 +213,7 @@ function TeamComponent() {
               onClick={() => setData(TeamData[3])}
             />
             <img
+              id="teamMemberDp"
               src={GeethaCharan}
               alt=""
               className="border-4 rounded-full"
@@ -209,6 +227,7 @@ function TeamComponent() {
             />
 
             <img
+              id="teamMemberDp"
               src={KrishnaVarma}
               alt=""
               className="border-4 rounded-full"
@@ -236,16 +255,17 @@ function TeamComponent() {
             />
           </div>
         </div>
-        <p className="text-base lg:text-4xl lg:mt-20 font-bold lg:font-semibold text-center lg:whitespace-pre-line">
+        <p className="text-base lg:text-3xl lg:mt-16 font-bold lg:font-semibold text-center lg:whitespace-pre-line">
           Advisors
         </p>
-        <div className="w-min ml-auto mr-auto mt-16">
+        <div className="w-min ml-auto mr-auto mt-7">
           <Rectangle2 />
           <div
-            className="absolute top-16"
-            style={{ width: "414px", height: "183px", top: 705 }}
+            className="absolute top-7"
+            style={{ width: "414px", height: "183px", top: 650 }}
           >
             <img
+              id="teamMemberDp"
               src={AnujBatra}
               alt=""
               className="border-4 rounded-full"
@@ -254,11 +274,12 @@ function TeamComponent() {
                 top: "50%",
                 left: -36,
                 transform: "translateY(-50%)",
-                borderColor: data.pic === KrishnaVarma ? "#4896EF" : null,
+                borderColor: data.pic === AnujBatra ? "#4896EF" : null,
               }}
               onClick={() => setData(TeamData[6])}
             />
             <img
+              id="teamMemberDp"
               src={AshutoshTewari}
               alt=""
               className="border-4 rounded-full"
@@ -272,6 +293,7 @@ function TeamComponent() {
               onClick={() => setData(TeamData[7])}
             />
             <img
+              id="teamMemberDp"
               src={NikhilSrivastava}
               alt=""
               className="border-4 rounded-full"
@@ -287,9 +309,9 @@ function TeamComponent() {
           </div>
         </div>
       </div>
-      <div className=" hidden lg:block lg:col-span-2" />
-      <div className="hidden lg:block lg:col-span-4 items-start">
-        <div className="border-2 border-forevv-blue rounded-2xl p-14 bg-white text-center">
+      <div className=" hidden xl:block xl:col-span-1" />
+      <div className="hidden xl:block xl:col-span-5 items-start">
+        <div className="border-2 border-forevv-blue rounded-2xl max-w-xl ml-auto mr-0 p-14 bg-white text-center">
           <div className="w-fit ml-auto mr-auto">
             <img src={data.pic} alt="" style={{ height: 250, width: 250 }} />
           </div>
@@ -299,16 +321,28 @@ function TeamComponent() {
           </p>
           <p className="italic text-2xl mb-2">{data.desc}</p>
           <div className="flex flex-row justify-center mt-5">
-            <a href={data.linkedin}>
-              <img src={Linkedin} alt="" />
-            </a>
-            <a href={data.instagram}>
-              <img src={Insta} alt="" />
-            </a>
+            {data.linkedin !== "" ? (
+              <motion.a
+                whileHover={{ scale: 1.1, rotateZ: -30 }}
+                href={data.linkedin}
+                target={"_blank"}
+              >
+                <img src={Linkedin} alt="" />
+              </motion.a>
+            ) : null}
+            {data.instagram !== "" ? (
+              <motion.a
+                whileHover={{ scale: 1.1, rotateZ: -30 }}
+                href={data.instagram}
+                target={"_blank"}
+              >
+                <img src={Insta} alt="" />
+              </motion.a>
+            ) : null}
           </div>
         </div>
       </div>
-      <div className="col-span-2 lg:col-span-1" />
+      <div className="col-span-2 xl:col-span-1" />
     </div>
   );
 }
